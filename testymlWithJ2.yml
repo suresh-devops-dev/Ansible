@@ -1,0 +1,10 @@
+---
+- hosts: '{{ my_host }}'
+  become: yes
+  tasks:
+  - name: install package
+    yum:
+      name: '{{ my_pkg }}'
+      state: '{{ my_state }}'
+    register: result
+  - debug: var=result
