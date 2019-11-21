@@ -1,0 +1,4 @@
+ansible-playbook -i 172.31.37.223, /home/ansible/package.yml --extra-vars "my_pkg=httpd my_state=present"
+ansible all -i 172.31.37.223, -m ping
+ansible all -i 172.31.37.223, -m shell -a ls
+ansible-playbook -i /home/ansible/hosts /home/ansible/package.yml --extra-vars "my_host=slave my_pkg=httpd my_state=restarted"
