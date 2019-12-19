@@ -6,8 +6,7 @@ yum -y install git python-jinja2 python-paramiko PyYAML make MySQL-python
 git clone git://github.com/ansible/ansible.git
 cd ansible
 git submodule update --init --recursive
-make install
-CTRL + D
+pip install ansible
 sudo echo "[localhost]" > ~/ansible_hosts
 sudo echo "localhost ansible_connection=local" >> ~/ansible_hosts
 export ANSIBLE_INVENTORY=~/ansible_hosts
